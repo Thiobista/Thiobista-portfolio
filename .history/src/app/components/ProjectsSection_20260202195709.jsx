@@ -52,7 +52,7 @@ const projectsData = [
     id: 6,
     title: "OCR System",
     description: "A mobile app that scans Amharic text.",
-    image: "/images/ocr.png",
+    image: "/images/projects/1.png",
     gitUrl: "https://github.com/Thiobista/OCR",
     previewUrl: "",
   },
