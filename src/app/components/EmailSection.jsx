@@ -53,13 +53,13 @@ const EmailSection = () => {
   return (
     <section
       id="contact"
-      className="section-container grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 relative overflow-hidden"
+      className="py-6 sm:py-8 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 relative overflow-hidden"
     >
       <div className="hidden sm:block bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-60 w-60 md:h-80 md:w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 pointer-events-none" />
 
       <div className="z-10">
         <h2 className="section-heading">Let&apos;s Connect</h2>
-        <p className="body-text mb-6 max-w-md">
+        <p className="body-text mb-4 max-w-md">
           I&apos;m currently looking for new opportunities, my inbox is always
           open. Whether you have a question or just want to say hi, I&apos;ll
           try my best to get back to you!
@@ -86,10 +86,10 @@ const EmailSection = () => {
 
       <div className="z-10 w-full min-w-0">
         <form className="flex flex-col" onSubmit={handleSubmit}>
-          <div className="mb-4 sm:mb-6">
+          <div className="mb-3">
             <label
               htmlFor="email"
-              className="text-white block mb-2 text-sm font-medium"
+              className="text-white block mb-1 text-sm font-medium"
             >
               Your email
             </label>
@@ -98,14 +98,14 @@ const EmailSection = () => {
               type="email"
               id="email"
               required
-              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5 sm:p-3"
+              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2"
               placeholder="jacob@google.com"
             />
           </div>
-          <div className="mb-4 sm:mb-6">
+          <div className="mb-3">
             <label
               htmlFor="subject"
-              className="text-white block text-sm mb-2 font-medium"
+              className="text-white block text-sm mb-1 font-medium"
             >
               Subject
             </label>
@@ -114,28 +114,28 @@ const EmailSection = () => {
               type="text"
               id="subject"
               required
-              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5 sm:p-3"
+              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2"
               placeholder="Just saying hi"
             />
           </div>
-          <div className="mb-4 sm:mb-6">
+          <div className="mb-3">
             <label
               htmlFor="message"
-              className="text-white block text-sm mb-2 font-medium"
+              className="text-white block text-sm mb-1 font-medium"
             >
               Message
             </label>
             <textarea
               name="message"
               id="message"
-              rows={4}
-              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5 sm:p-3 resize-y min-h-[100px]"
+              rows={2}
+              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2 resize-none h-16"
               placeholder="Let's talk about..."
             />
           </div>
           <button
             type="submit"
-            className="bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full sm:w-auto sm:self-start transition-colors"
+            className="bg-primary-500 hover:bg-primary-600 text-white font-medium py-2 px-4 rounded-lg w-full sm:w-auto sm:self-start transition-colors text-sm"
           >
             Send Message
           </button>

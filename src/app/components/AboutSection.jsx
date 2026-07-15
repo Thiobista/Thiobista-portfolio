@@ -116,10 +116,10 @@ const AboutSection = () => {
   const activeTab = TAB_DATA.find((t) => t.id === tab);
 
   return (
-    <section className="text-white section-container" id="about">
-      <div className="max-w-4xl">
+    <section className="text-white section-container text-center" id="about">
+      <div className="max-w-4xl mx-auto">
         <h2 className="section-heading">About Me</h2>
-        <p className="body-text mb-8">
+        <p className="body-text mb-8 mx-auto max-w-2xl">
           Hi, I&apos;m{" "}
           <span className="font-semibold text-white">Thiobista Gedefaw</span>, a
           Full Stack Developer building modern web and AI-driven applications
@@ -128,7 +128,7 @@ const AboutSection = () => {
           maintainable, visually appealing solutions that feel great to use.
         </p>
 
-        <div className="tab-scroll">
+        <div className="tab-scroll justify-center">
           {TAB_DATA.map((tabItem) => (
             <TabButton
               key={tabItem.id}
