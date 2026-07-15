@@ -8,6 +8,19 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        background: "#121212",
+        "background-card": "#181818",
+        "background-input": "#18191E",
+        border: "#33353F",
+        muted: "#ADB7BE",
+        subtle: "#9CA2A9",
+      },
+      fontSize: {
+        "hero": ["3rem", { lineHeight: "1.1", fontWeight: "800" }],
+        "hero-sm": ["2.25rem", { lineHeight: "1.2", fontWeight: "800" }],
+        "section": ["2.25rem", { lineHeight: "1.2", fontWeight: "700" }],
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

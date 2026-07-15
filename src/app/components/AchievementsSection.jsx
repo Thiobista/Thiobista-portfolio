@@ -27,8 +27,8 @@ const achievementsList = [
 
 const AchievementsSection = () => {
   return (
-    <div className="py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-      <div className="sm:border-[#33353F] sm:border rounded-md py-8 px-16 flex flex-col sm:flex-row items-center justify-between">
+    <div className="section-container">
+      <div className="card flex flex-col sm:flex-row items-center justify-between gap-8">
         {achievementsList.map((achievement, index) => (
           <div
             key={index}
@@ -49,7 +49,7 @@ const AchievementsSection = () => {
               />
               {achievement.postfix}
             </h2>
-            <p className="text-[#ADB7BE] text-base">{achievement.metric}</p>
+            <p className="text-muted text-base">{achievement.metric}</p>
           </div>
         ))}
       </div>
@@ -118,7 +118,7 @@ export default AchievementsSection;
 //                 />
 //                 {achievement.postfix}
 //               </h2>
-//               <p className="text-[#ADB7BE] text-base">{achievement.metric}</p>
+//               <p className="text-muted text-base">{achievement.metric}</p>
 //             </div>
 //           );
 //         })}
