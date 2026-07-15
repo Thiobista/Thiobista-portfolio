@@ -41,14 +41,11 @@ const EmailSection = () => {
         setEmailSubmitted(true);
         e.target.reset();
         showToast("success", "Message sent successfully!");
-        console.log("Message sent:", resData);
       } else {
         const errorMessage = resData?.error || "Failed to send message.";
         showToast("error", errorMessage);
-        console.error("Send message failed:", resData);
       }
     } catch (error) {
-      console.error("Network error sending message:", error);
       showToast("error", "Network error. Please try again.");
     }
   };
@@ -56,39 +53,40 @@ const EmailSection = () => {
   return (
     <section
       id="contact"
-      className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative"
+      className="section-container grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 relative overflow-hidden"
     >
-      <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
+      <div className="hidden sm:block bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-60 w-60 md:h-80 md:w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 pointer-events-none" />
+
       <div className="z-10">
-        <h5 className="text-xl font-bold text-white my-2">
-          Let&apos;s Connect
-        </h5>
-        <p className="text-[#ADB7BE] mb-4 max-w-md">
-          {" "}
+        <h2 className="section-heading">Let&apos;s Connect</h2>
+        <p className="body-text mb-6 max-w-md">
           I&apos;m currently looking for new opportunities, my inbox is always
           open. Whether you have a question or just want to say hi, I&apos;ll
           try my best to get back to you!
         </p>
-        <div className="socials flex flex-row gap-2">
+        <div className="socials flex flex-row gap-3">
           <Link
             href="https://github.com/Thiobista"
             target="_blank"
             rel="noopener noreferrer"
+            className="hover:opacity-80 transition-opacity"
           >
-            <Image src={GithubIcon} alt="Github Icon" />
+            <Image src={GithubIcon} alt="Github Icon" className="w-8 h-8 sm:w-10 sm:h-10" />
           </Link>
           <Link
             href="https://www.linkedin.com/in/thiobistagedefaw/"
             target="_blank"
             rel="noopener noreferrer"
+            className="hover:opacity-80 transition-opacity"
           >
-            <Image src={LinkedinIcon} alt="Linkedin Icon" />
+            <Image src={LinkedinIcon} alt="Linkedin Icon" className="w-8 h-8 sm:w-10 sm:h-10" />
           </Link>
         </div>
       </div>
-      <div>
+
+      <div className="z-10 w-full min-w-0">
         <form className="flex flex-col" onSubmit={handleSubmit}>
-          <div className="mb-6">
+          <div className="mb-4 sm:mb-6">
             <label
               htmlFor="email"
               className="text-white block mb-2 text-sm font-medium"
@@ -100,11 +98,11 @@ const EmailSection = () => {
               type="email"
               id="email"
               required
-              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5 sm:p-3"
               placeholder="jacob@google.com"
             />
           </div>
-          <div className="mb-6">
+          <div className="mb-4 sm:mb-6">
             <label
               htmlFor="subject"
               className="text-white block text-sm mb-2 font-medium"
@@ -116,11 +114,11 @@ const EmailSection = () => {
               type="text"
               id="subject"
               required
-              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5 sm:p-3"
               placeholder="Just saying hi"
             />
           </div>
-          <div className="mb-6">
+          <div className="mb-4 sm:mb-6">
             <label
               htmlFor="message"
               className="text-white block text-sm mb-2 font-medium"
@@ -130,13 +128,14 @@ const EmailSection = () => {
             <textarea
               name="message"
               id="message"
-              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+              rows={4}
+              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5 sm:p-3 resize-y min-h-[100px]"
               placeholder="Let's talk about..."
             />
           </div>
           <button
             type="submit"
-            className="bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
+            className="bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full sm:w-auto sm:self-start transition-colors"
           >
             Send Message
           </button>
@@ -147,9 +146,10 @@ const EmailSection = () => {
           )}
         </form>
       </div>
+
       {toast && (
         <div
-          className={`fixed bottom-6 right-6 z-50 px-4 py-3 rounded-lg shadow-lg text-sm ${
+          className={`fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:max-w-sm z-50 px-4 py-3 rounded-lg shadow-lg text-sm ${
             toast.type === "success"
               ? "bg-emerald-600 text-white"
               : "bg-red-600 text-white"

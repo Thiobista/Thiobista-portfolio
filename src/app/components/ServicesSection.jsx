@@ -5,7 +5,7 @@ const ServicesSection = () => {
   return (
     <section id="services" className="text-white section-container">
       <h2 className="section-heading text-center mb-12">My Services</h2>
-      <div className="grid md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
         <div className="card">
           <h3 className="section-subheading mb-4">
             Custom Web Application Development

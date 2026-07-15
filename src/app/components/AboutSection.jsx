@@ -44,7 +44,7 @@ const CERTIFICATIONS = [
 ];
 
 const SkillsContent = () => (
-  <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-2 sm:gap-3">
     {SKILLS.map((skill) => (
       <span key={skill} className="skill-badge text-center">
         {skill}
@@ -128,7 +128,7 @@ const AboutSection = () => {
           maintainable, visually appealing solutions that feel great to use.
         </p>
 
-        <div className="flex flex-row gap-2 sm:gap-4 border-b border-[#33353F] pb-1">
+        <div className="tab-scroll">
           {TAB_DATA.map((tabItem) => (
             <TabButton
               key={tabItem.id}
