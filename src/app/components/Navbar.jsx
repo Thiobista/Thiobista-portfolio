@@ -7,8 +7,9 @@ import MenuOverlay from "./MenuOverlay";
 
 const navLinks = [
   { title: "About", path: "#about" },
-  { title: "Services", path: "#services" },
+  { title: "GymERP", path: "#featured" },
   { title: "Projects", path: "#projects" },
+  { title: "Services", path: "#services" },
   { title: "Contact", path: "#contact" },
 ];
 
@@ -20,9 +21,14 @@ const Navbar = () => {
       <div className="page-container flex items-center justify-between py-3 sm:py-4">
         <Link
           href="/"
-          className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white font-semibold truncate"
+          className="flex items-baseline gap-2 text-white truncate"
         >
-          Thiobista
+          <span className="text-lg sm:text-xl md:text-2xl font-bold">
+            Thiobista<span className="text-primary-400">.</span>
+          </span>
+          <span className="hidden lg:inline text-sm text-muted">
+            Software Engineer
+          </span>
         </Link>
 
         <button

@@ -7,16 +7,11 @@ import {
   CodeBracketIcon,
 } from "@heroicons/react/24/outline";
 
-const SKILLS = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Vue",
-  "SQL",
-  "AI / ML",
+const SKILL_GROUPS = [
+  { label: "Languages", items: ["Go", "TypeScript", "JavaScript", "Python", "Dart", "SQL"] },
+  { label: "Backend", items: ["Gin", "REST APIs", "GraphQL / Hasura", "JWT & RBAC", "PostgreSQL", "MongoDB"] },
+  { label: "Frontend & Mobile", items: ["React", "Next.js", "Vue / Nuxt", "Tailwind CSS", "Flutter"] },
+  { label: "DevOps & AI", items: ["Docker", "Git & CI/CD", "Vercel", "Machine Learning", "OCR / NLP"] },
 ];
 
 const EDUCATION = [
@@ -44,11 +39,20 @@ const CERTIFICATIONS = [
 ];
 
 const SkillsContent = () => (
-  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-2 sm:gap-3">
-    {SKILLS.map((skill) => (
-      <span key={skill} className="skill-badge text-center">
-        {skill}
-      </span>
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 text-left">
+    {SKILL_GROUPS.map((group) => (
+      <div key={group.label}>
+        <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-3">
+          {group.label}
+        </h4>
+        <div className="flex flex-wrap gap-2">
+          {group.items.map((skill) => (
+            <span key={skill} className="skill-badge">
+              {skill}
+            </span>
+          ))}
+        </div>
+      </div>
     ))}
   </div>
 );
@@ -122,10 +126,12 @@ const AboutSection = () => {
         <p className="body-text mb-8 mx-auto max-w-2xl">
           Hi, I&apos;m{" "}
           <span className="font-semibold text-white">Thiobista Gedefaw</span>, a
-          Full Stack Developer building modern web and AI-driven applications
-          with Next.js, React, Vue, and Go. I&apos;m passionate about clean UI,
-          scalable systems, and real-world impact, and I love crafting
-          maintainable, visually appealing solutions that feel great to use.
+          software engineer with a Computer Science &amp; Engineering background
+          from Bahir Dar University. I work across the stack: I design
+          backend services and data models in Go and PostgreSQL, build
+          product interfaces in Next.js and Vue, and ship mobile and AI
+          features with Flutter and Python. I value clear architecture,
+          well-tested code and close collaboration with product and design.
         </p>
 
         <div className="tab-scroll justify-center">

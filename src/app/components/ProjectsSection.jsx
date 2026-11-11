@@ -6,126 +6,91 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "Food Recipe Site",
+    title: "GymERP: Multi-tenant Gym SaaS",
     description:
-      "Platform for browsing, sharing, and managing recipes with filtering, ratings, and comments. Built with Go, Vue 3, TailwindCSS, Hasura, and Postgres.",
-    image: "/images/food.jpg",
-    gitUrl: "https://github.com/Thiobista/Food-recipe-site1",
+      "Production-grade SaaS ERP for gyms: members, membership plans, QR/kiosk check-ins, payments and refunds, RBAC and revenue reports across branches.",
+    image: "/images/gym-erp.svg",
+    tags: ["Go", "PostgreSQL", "Next.js", "Docker"],
+    gitUrl: "https://github.com/Thiobista/GYM-ERP",
     previewUrl: "",
   },
   {
     id: 2,
-    title: "Lanet Mobile App",
-    description:
-      "LANET is a modern language learning platform that helps users practice, track progress, and improve communication skills for Ethiopian languages.",
-    image: "/images/lanet.png",
-    gitUrl: "https://github.com/rahel-yekoye/lanet-mobile",
-    previewUrl: "",
-  },
-  {
-    id: 3,
     title: "AVS Startup Hub Management System",
     description:
-      "Web-based platform designed to manage startup applications, partnerships, and startup portfolios in a centralized system.",
+      "Web platform that manages startup applications, partnerships and startup portfolios in one central system.",
     image: "/images/avs.png",
+    tags: ["Next.js", "React", "Tailwind"],
     gitUrl: "https://github.com/Thiobista/AVS",
     previewUrl: "https://avs-wehm.vercel.app/",
   },
   {
-    id: 4,
-    title: "Shega Date",
+    id: 3,
+    title: "Food Recipe Platform",
     description:
-      "ShegaDate is a smart date-spot recommendation platform that helps users discover the best places to go on dates based on their preferences and location.",
-    image: "/images/shegadate.png",
-    gitUrl: "https://github.com/Thiobista/ShegaDate",
+      "Platform for browsing, sharing and managing recipes, with filtering, ratings and comments, backed by a GraphQL API.",
+    image: "/images/food.jpg",
+    tags: ["Go", "Vue 3", "Hasura", "PostgreSQL"],
+    gitUrl: "https://github.com/Thiobista/Food-recipe-site1",
+    previewUrl: "",
+  },
+  {
+    id: 4,
+    title: "LANET Language Learning App",
+    description:
+      "Mobile language-learning platform that helps users practise, track progress and improve their communication skills in Ethiopian languages.",
+    image: "/images/lanet.png",
+    tags: ["Flutter", "Mobile"],
+    gitUrl: "https://github.com/rahel-yekoye/lanet-mobile",
     previewUrl: "",
   },
   {
     id: 5,
-    title: "Asheten",
-    description: "Company portfolio website.",
-    image: "/images/asheten.png",
-    gitUrl: "https://github.com/Thiobista/Asheten",
+    title: "Amharic OCR",
+    description:
+      "Mobile app that uses machine learning to recognise and digitise Amharic text from images.",
+    image: "/images/ocr.png",
+    tags: ["Flutter", "AI / ML"],
+    gitUrl: "https://github.com/Thiobista/OCR",
     previewUrl: "",
   },
   {
     id: 6,
-    title: "OCR System",
-    description: "A mobile app that scans Amharic text.",
-    image: "/images/ocr.png",
-    gitUrl: "https://github.com/Thiobista/OCR",
+    title: "ShegaDate",
+    description:
+      "Date-spot recommendation platform that suggests places to go based on each user's preferences and location.",
+    image: "/images/shegadate.png",
+    tags: ["Full Stack", "Recommendations"],
+    gitUrl: "https://github.com/Thiobista/ShegaDate",
     previewUrl: "",
   },
   {
     id: 7,
     title: "Rick and Morty Explorer",
     description:
-      "Nuxt 3 web app to explore Rick and Morty characters, episodes, and locations with dynamic API-driven data.",
+      "Nuxt 3 app for exploring characters, episodes and locations, with dynamic data from the Rick and Morty API.",
     image: "/images/rick&morty.jpg",
+    tags: ["Nuxt 3", "Vue"],
     gitUrl: "https://github.com/Thiobista/Rich-and-Morty-Project",
     previewUrl: "https://rich-and-morty-project-dibp.vercel.app/",
   },
   {
     id: 8,
-    title: "Song Management Website",
+    title: "Song Management App",
     description:
-      "React app to manage songs with create, update, and delete features using Redux Toolkit, Redux-Saga, and Emotion.",
+      "React app for creating, updating and deleting songs, built with Redux Toolkit, Redux-Saga and Emotion.",
     image: "/images/projects/2.png",
+    tags: ["React", "Redux-Saga"],
     gitUrl: "",
     previewUrl: "https://songmanagement.vercel.app/",
   },
   {
     id: 9,
-    title: "Consultancy Website",
-    description:
-      "Responsive consultancy website built with HTML, CSS, and JavaScript to showcase services and improve user experience.",
-    image: "/images/cons.jpg",
-    gitUrl: "",
-    previewUrl: "",
-  },
-  {
-    id: 10,
-    title: "Landing Page",
-    description:
-      "Conversion-focused landing page built with semantic HTML, modern CSS, and JavaScript interactions.",
-    image: "/images/lnd.jpg",
-    gitUrl: "",
-    previewUrl: "",
-  },
-  {
-    id: 11,
-    title: "Online Magazine Layout",
-    description:
-      "Magazine-style layout for articles and media with responsive design and smooth reading experience.",
-    image: "/images/mag.jpg",
-    gitUrl: "",
-    previewUrl: "",
-  },
-  {
-    id: 12,
-    title: "Nutrition Label",
-    description:
-      "Interactive nutrition label component providing detailed nutritional information with customizable serving sizes.",
-    image: "/images/nutr.jpg",
-    gitUrl: "",
-    previewUrl: "",
-  },
-  {
-    id: 13,
-    title: "Cafe Menu",
-    description:
-      "Digital cafe menu for displaying food and drink options online with easily updatable content.",
-    image: "/images/cafe.jpg",
-    gitUrl: "",
-    previewUrl: "",
-  },
-  {
-    id: 14,
-    title: "Web Calculator",
-    description:
-      "Web-based calculator built with HTML, CSS, and JavaScript for quick, accessible calculations.",
-    image: "/images/cal.jpg",
-    gitUrl: "",
+    title: "Asheten",
+    description: "Company website for Asheten.",
+    image: "/images/asheten.png",
+    tags: ["Web"],
+    gitUrl: "https://github.com/Thiobista/Asheten",
     previewUrl: "",
   },
 ];
@@ -145,7 +110,7 @@ const ProjectsSection = () => {
   return (
     <section id="projects" className="section-container">
       <h2 className="section-heading text-center mb-6 sm:mb-8 md:mb-12">
-        My Projects
+        Selected Projects
       </h2>
       <ul
         ref={ref}
@@ -166,6 +131,7 @@ const ProjectsSection = () => {
               imgUrl={project.image}
               gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}
+              tags={project.tags}
             />
           </motion.li>
         ))}

@@ -15,24 +15,24 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="text-center md:text-left order-2 md:order-1"
         >
-          <p className="text-primary-400 font-medium text-xs sm:text-sm md:text-base uppercase tracking-wider mb-2">
-            Welcome to my portfolio
+          <p className="inline-flex items-center gap-2 text-primary-400 font-medium text-xs sm:text-sm uppercase tracking-wider mb-3">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+            Available for new opportunities
           </p>
           <h1 className="text-white mb-3 sm:mb-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
-              Hello, I am{" "}
-            </span>
-            <span className="block mt-1">Thiobista</span>
+            Thiobista Gedefaw
           </h1>
-          <p className="text-muted text-base sm:text-lg md:text-xl font-semibold mb-3 sm:mb-4 min-h-[1.75rem] sm:min-h-[2rem]">
+          <p className="text-xl sm:text-2xl md:text-3xl font-semibold mb-3 sm:mb-4 min-h-[2rem] sm:min-h-[2.5rem] text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-200">
             <TypeAnimation
               sequence={[
-                "Full Stack Developer",
-                1500,
-                "Mobile App Developer",
-                1500,
-                "AI Engineer",
-                1500,
+                "Software Engineer",
+                2000,
+                "Backend Engineer · Go",
+                2000,
+                "Full Stack Engineer",
+                2000,
+                "AI / ML Engineer",
+                2000,
               ]}
               wrapper="span"
               speed={50}
@@ -40,13 +40,14 @@ const HeroSection = () => {
             />
           </p>
           <p className="body-text mb-6 sm:mb-8 max-w-xl mx-auto md:mx-0">
-            Full Stack Developer building modern web and AI-driven applications
-            with Next.js, React, Vue, and Go. Passionate about clean UI,
-            scalable systems, and real-world impact.
+            I design and build reliable, scalable software, from multi-tenant
+            SaaS backends in Go and PostgreSQL to fast, accessible frontends in
+            Next.js and React. I care about clean architecture, maintainable
+            code and products that solve real problems.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start max-w-sm mx-auto md:mx-0 md:max-w-none">
-            <Link href="/#contact" className="btn-primary">
-              Hire Me
+            <Link href="/#projects" className="btn-primary">
+              View My Work
             </Link>
             <Link
               href="/images/Resume%20-%20AI%20Intern.pdf"
@@ -55,6 +56,27 @@ const HeroSection = () => {
               className="btn-secondary"
             >
               Download CV
+            </Link>
+          </div>
+          <div className="flex gap-5 mt-6 justify-center md:justify-start text-sm">
+            <Link
+              href="https://github.com/Thiobista"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted hover:text-white transition-colors"
+            >
+              GitHub ↗
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/thiobistagedefaw/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted hover:text-white transition-colors"
+            >
+              LinkedIn ↗
+            </Link>
+            <Link href="/#contact" className="text-muted hover:text-white transition-colors">
+              Contact ↗
             </Link>
           </div>
         </motion.div>

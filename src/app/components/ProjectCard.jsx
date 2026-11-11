@@ -2,7 +2,7 @@ import React from "react";
 import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
-const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
+const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl, tags = [] }) => {
   const hasGit = gitUrl && gitUrl.startsWith("http");
   const hasPreview = previewUrl && previewUrl.startsWith("http");
 
@@ -42,6 +42,18 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
         <p className="text-muted text-sm sm:text-base line-clamp-3 sm:line-clamp-4">
           {description}
         </p>
+        {tags.length > 0 && (
+          <div className="flex flex-wrap gap-1.5 mt-3">
+            {tags.map((tag) => (
+              <span
+                key={tag}
+                className="px-2 py-0.5 rounded bg-[#232323] border border-[#33353F] text-[#ADB7BE] text-xs"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
